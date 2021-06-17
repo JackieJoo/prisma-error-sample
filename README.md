@@ -7,7 +7,7 @@
 4. Run `npm run migrate`.
 5. Run `npm run deploy`.
 6. Run `npm run dev`.
-7. Run `npm test` a few times one instantly after another -> the Error occurs.
+7. Run `npm test` a few times (5+ at least) one instantly after another -> the Error occurs.
 
 Error messages (may differ from time to time, but have similar structure and origin I reckon):
 ```
