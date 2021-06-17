@@ -1,0 +1,6 @@
+{
+    "exec": "ts-node src/",
+    "ignore": "src/generated/*",
+    "ext": "ts graphql",
+    "watch": "src"
+}

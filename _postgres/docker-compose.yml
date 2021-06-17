@@ -1,0 +1,14 @@
+version: '3'
+services:
+  postgres:
+    ports:
+      - '5432:5432'
+    image: postgres:10.3
+    restart: always
+    environment:
+      POSTGRES_USER: prisma
+      POSTGRES_PASSWORD: prisma
+    volumes:
+      - postgres:/var/lib/postgresql/data
+volumes:
+  postgres: ~

@@ -1,0 +1,60 @@
+
+type Query {
+  user(where: UserWhereUniqueInput!): User
+  users: [User]!
+  post(where: PostWhereUniqueInput!): Post
+  posts: [Post]!
+}
+
+type Mutation {
+  createUser(data: UserCreateInput!): User
+  createPost(data: PostCreateInput!): Post
+  addPostToUser(where:UserWhereUniqueInput, data: PostCreateInput): User
+}
+
+type User {
+  name: String!
+  email: String!
+  posts: [Post]!
+  profile: ExtendedProfile!
+}
+
+type ExtendedProfile {
+  bio: String!
+  user: User!
+}
+
+type Post {
+  title: String!
+  author: User!
+  likes: Int!
+}
+
+input UserWhereUniqueInput {
+  email: String!
+}
+
+input UserCreateInput {
+  name: String!
+  email: String!
+  post: PostCreateInput
+  profile: ProfileCreateInput
+}
+
+input PostWhereUniqueInput {
+  title: String!
+}
+
+input PostCreateInput {
+  title: String!
+  author: UserWhereUniqueInput
+}
+
+input ProfileCreateInput {
+  bio: String!
+}
+
+enum Role {
+  USER
+  ADMIN
+}
