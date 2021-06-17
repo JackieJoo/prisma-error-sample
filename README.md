@@ -42,3 +42,9 @@ graphQLErrors: [
   }
 ],
 ```
+
+Log from docker:
+
+```
+postgres_postgres_1 | 2021-06-17 18:03:22.055 UTC [883] ERROR: cached plan must not change result type
+```
